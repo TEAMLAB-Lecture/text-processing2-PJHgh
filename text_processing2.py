@@ -72,8 +72,8 @@ def to_camel_case(underscore_str):
     if not '_' in underscore_str: return underscore_str
     underscore_str = underscore_str.lower()
     underscore_str = [s for s in underscore_str.split('_') if s != '']
+    if len(underscore_str) == 0: return ''
     camelcase_str = underscore_str[0]
     for s in underscore_str[1:]:
         camelcase_str += s.capitalize()
     return camelcase_str
-    
